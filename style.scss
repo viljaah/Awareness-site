@@ -1,0 +1,411 @@
+/* whole page style */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden; /* the content is "clipped" */
+}
+html {
+  scroll-snap-type: y mandatory; /* viewport of the scroll container must snap to a snap position if it isn't currently scrolled */
+}
+h2 {
+  font-size: 2vw;
+}
+.keyword {
+  color: rgb(255, 0, 0);
+}
+.keyword2 {
+  color: #EEAD51;
+}
+
+/* slide 1 */
+header {
+  width: 100vw;
+  height: 100vh;
+}
+.top {
+  position: absolute;
+  width: 100%;
+  scroll-snap-align: start;
+
+  & img {
+    position: absolute;
+    top: -100vh;
+  }
+
+  &__title h1 {
+    text-align: center;
+    font-size: 4.2vw;
+    font-family: "Times New Roman", Times, serif;
+    text-transform: uppercase;
+    color: #5953a3;
+    position: relative;
+    margin-top: 25vw;
+    z-index: 3;
+  }
+}
+
+/* new slide */
+.store {
+  position: relative;
+  scroll-snap-align: start;
+  width: 100vw;
+  height: 100vh;
+
+  &__image img {
+    position: absolute;
+  }
+  & p {
+    position: absolute;
+    z-index: 2;
+    margin-left: 3vw;
+    margin-top: 5vw;
+    padding: 10px;
+    max-width: 50%;
+    font-size: 2vw;
+    color: rgb(0, 0, 0);
+  }
+}
+
+/* slide 2 */
+.city {
+  position: relative;
+  scroll-snap-align: start;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgb(131, 118, 100), rgb(255, 255, 255));
+
+  &__image img {
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+.smoke {
+  position: absolute;
+}
+.kid1 {
+  position: absolute;
+  z-index: 5;
+}
+
+/* slide 3 */
+.waste {
+  position: relative;
+  scroll-snap-align: start;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgb(106, 124, 162), rgb(94, 93, 93));
+
+  &__image img {
+    position: absolute;
+  }
+}
+.waste p,
+.city p {
+  position: absolute;
+  z-index: 2;
+  margin-left: 90px;
+  padding: 10px;
+  max-width: 50%;
+  font-size: 2vw;
+  color: rgb(0, 0, 0);
+}
+.text__box {
+  background-color: rgb(255 255 255 / 30%);
+  border-radius: 15px;
+}
+
+.clouds {
+  position: absolute;
+}
+.tractor {
+  position: absolute;
+}
+
+/* slide 4 */
+.clean {
+  position: relative;
+  scroll-snap-align: start;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+
+  &__image img {
+    position: absolute;
+  }
+  & h3 {
+    position: absolute;
+    z-index: 2;
+    margin-left: 8vw;
+    margin-top: 8vw;
+    max-width: 40%;
+    font-size: 2.5vw;
+    color: rgb(0, 0, 0);
+  }
+}
+.stars {
+  position: absolute;
+  z-index: 20;
+}
+
+/* slide 5 */
+.actions {
+  scroll-snap-align: start;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+
+  &__image img {
+    position: absolute;
+    z-index: -10;
+  }
+
+  & h2 {
+    padding: 2vw;
+    font-size: 2.5vw;
+    position: absolute;
+    margin-top: 15vw;
+  }
+  & ul {
+    text-align: start;
+    max-width: 60%;
+    font-size: 1.5vw;
+    margin-left: 7vw;
+    position: absolute;
+    margin-top: 22vw;
+  }
+  & li {
+    margin-bottom: 1vw;
+  }
+  &__recycle::marker {
+    content: url("img/recycling.png");
+  }
+}
+
+.animated-image {
+  max-width: 20vw;
+  max-height: 20vh;
+  position: relative;
+  opacity: 0;
+  transition: opacity 15s ease;
+}
+.animate-in {
+  opacity: 1 !important;
+}
+
+
+
+/*animation clouds*/
+@keyframes drift-cloud1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.cloud1,
+.cloud2,
+.cloud4 {
+  animation: drift-cloud1 140s linear infinite;
+}
+
+@keyframes drift-cloud3 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+.cloud3 {
+  animation: drift-cloud3 125s linear infinite;
+}
+
+/*animation tractor*/
+@keyframes move-tractor {
+  0% {
+    transform: translateX(-50%);
+  }
+  40% {
+    transform: translateX(40px);
+  }
+  60% {
+    transform: translateX(40px);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.tractor {
+  animation: move-tractor 25s linear infinite;
+}
+
+/*animation tractor shovel*/
+@keyframes dump {
+  40% {
+    transform: rotate(0deg);
+  }
+  44% {
+    transform: rotate(40deg);
+  }
+  56% {
+    transform: rotate(40deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+}
+.shovel {
+  animation: dump 25s infinite;
+  transform-origin: 588.26px 561.81px;
+}
+
+/*animation tractor clothes*/
+@keyframes dump2 {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  40% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  44% {
+    transform: rotate(40deg);
+    opacity: 1;
+  }
+  56% {
+    transform: rotate(40deg);
+    opacity: 0;
+  }
+  60% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+}
+.shirt-purple,
+.shirt-brown,
+.shirt-brown2,
+.shirt-green,
+.shirt-red,
+.pants-blue,
+.pants-darkblue,
+.pants-lightblue {
+  animation: dump2 25s infinite;
+  transform-origin: 588.26px 561.81px;
+}
+
+/*animation smoke*/
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+.smoke {
+  animation: pulse 5s infinite;
+}
+
+/*animation kid*/
+@keyframes move-needle {
+  0% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(3px);
+  }
+}
+.sewing-needle {
+  animation: move-needle 0.5s linear infinite alternate;
+}
+
+@keyframes sew {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(15px);
+  }
+}
+.sewing-sweater {
+  animation: sew 4s linear infinite alternate;
+}
+
+/*animation clean water*/
+@keyframes blink1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.star1 {
+  animation: blink1 4s infinite;
+}
+
+@keyframes blink2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.star2 {
+  animation: blink2 3s infinite;
+}
+
+@keyframes blink3 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.star3 {
+  animation: blink3 5s infinite;
+}
+
+
+
+/* mobile version */
+.turn {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  visibility: hidden;
+  font-size: 3vw;
+}
+@media screen and (max-width: 1200px) {
+  .turn {
+      visibility: visible;
+  }
+}
