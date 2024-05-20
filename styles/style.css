@@ -4,17 +4,21 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden; /* the content is "clipped" */
 }
+
 html {
   scroll-snap-type: y mandatory; /* viewport of the scroll container must snap to a snap position if it isn't currently scrolled */
 }
+
 h2 {
   font-size: 2vw;
 }
+
 .keyword {
   color: rgb(255, 0, 0);
 }
+
 .keyword2 {
-  color: #EEAD51;
+  color: #eead51;
 }
 
 /* slide 1 */
@@ -22,51 +26,49 @@ header {
   width: 100vw;
   height: 100vh;
 }
+
 .top {
   position: absolute;
   width: 100%;
   scroll-snap-align: start;
-
-  & img {
-    position: absolute;
-    top: -100vh;
-  }
-
-  &__title h1 {
-    text-align: center;
-    font-size: 4.2vw;
-    font-family: "Times New Roman", Times, serif;
-    text-transform: uppercase;
-    color: #5953a3;
-    position: relative;
-    margin-top: 25vw;
-    z-index: 3;
-  }
+}
+.top img {
+  position: absolute;
+  top: -100vh;
+}
+.top__title h1 {
+  text-align: center;
+  font-size: 4.2vw;
+  font-family: "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  color: #5953a3;
+  position: relative;
+  margin-top: 25vw;
+  z-index: 3;
 }
 
-/* new slide */
+/* slide 2 */
 .store {
   position: relative;
   scroll-snap-align: start;
   width: 100vw;
   height: 100vh;
-
-  &__image img {
-    position: absolute;
-  }
-  & p {
-    position: absolute;
-    z-index: 2;
-    margin-left: 3vw;
-    margin-top: 5vw;
-    padding: 10px;
-    max-width: 50%;
-    font-size: 2vw;
-    color: rgb(0, 0, 0);
-  }
+}
+.store__image img {
+  position: absolute;
+}
+.store p {
+  position: absolute;
+  z-index: 2;
+  margin-left: 3vw;
+  margin-top: 5vw;
+  padding: 10px;
+  max-width: 50%;
+  font-size: 2vw;
+  color: rgb(0, 0, 0);
 }
 
-/* slide 2 */
+/* slide 3 */
 .city {
   position: relative;
   scroll-snap-align: start;
@@ -74,22 +76,22 @@ header {
   width: 100vw;
   height: 100vh;
   background-image: linear-gradient(rgb(131, 118, 100), rgb(255, 255, 255));
-
-  &__image img {
-    position: absolute;
-    z-index: 1;
-  }
+}
+.city__image img {
+  position: absolute;
+  z-index: 1;
 }
 
 .smoke {
   position: absolute;
 }
+
 .kid1 {
   position: absolute;
   z-index: 5;
 }
 
-/* slide 3 */
+/* slide 4 */
 .waste {
   position: relative;
   scroll-snap-align: start;
@@ -97,11 +99,11 @@ header {
   width: 100vw;
   height: 100vh;
   background-image: linear-gradient(rgb(106, 124, 162), rgb(94, 93, 93));
-
-  &__image img {
-    position: absolute;
-  }
 }
+.waste__image img {
+  position: absolute;
+}
+
 .waste p,
 .city p {
   position: absolute;
@@ -112,77 +114,77 @@ header {
   font-size: 2vw;
   color: rgb(0, 0, 0);
 }
+
 .text__box {
-  background-color: rgb(255 255 255 / 30%);
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 15px;
 }
 
 .clouds {
   position: absolute;
 }
+
 .tractor {
   position: absolute;
 }
 
-/* slide 4 */
+/* slide 5 */
 .clean {
   position: relative;
   scroll-snap-align: start;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
-
-  &__image img {
-    position: absolute;
-  }
-  & h3 {
-    position: absolute;
-    z-index: 2;
-    margin-left: 8vw;
-    margin-top: 8vw;
-    max-width: 40%;
-    font-size: 2.5vw;
-    color: rgb(0, 0, 0);
-  }
 }
+.clean__image img {
+  position: absolute;
+}
+.clean h3 {
+  position: absolute;
+  z-index: 2;
+  margin-left: 8vw;
+  margin-top: 8vw;
+  max-width: 40%;
+  font-size: 2.5vw;
+  color: rgb(0, 0, 0);
+}
+
 .stars {
   position: absolute;
   z-index: 20;
 }
 
-/* slide 5 */
+/* slide 6 */
 .actions {
   scroll-snap-align: start;
   overflow: hidden;
   height: 100vh;
   width: 100vw;
   position: relative;
-
-  &__image img {
-    position: absolute;
-    z-index: -10;
-  }
-
-  & h2 {
-    padding: 2vw;
-    font-size: 2.5vw;
-    position: absolute;
-    margin-top: 15vw;
-  }
-  & ul {
-    text-align: start;
-    max-width: 60%;
-    font-size: 1.5vw;
-    margin-left: 7vw;
-    position: absolute;
-    margin-top: 22vw;
-  }
-  & li {
-    margin-bottom: 1vw;
-  }
-  &__recycle::marker {
-    content: url("img/recycling.png");
-  }
+}
+.actions__image img {
+  position: absolute;
+  z-index: -10;
+}
+.actions h2 {
+  padding: 2vw;
+  font-size: 2.5vw;
+  position: absolute;
+  margin-top: 15vw;
+}
+.actions ul {
+  text-align: start;
+  max-width: 60%;
+  font-size: 1.5vw;
+  margin-left: 7vw;
+  position: absolute;
+  margin-top: 22vw;
+}
+.actions li {
+  margin-bottom: 1vw;
+}
+.actions__recycle::marker {
+  content: url("/img/recycling.png");
 }
 
 .animated-image {
@@ -192,11 +194,10 @@ header {
   opacity: 0;
   transition: opacity 15s ease;
 }
+
 .animate-in {
   opacity: 1 !important;
 }
-
-
 
 /*animation clouds*/
 @keyframes drift-cloud1 {
@@ -210,7 +211,7 @@ header {
 .cloud1,
 .cloud2,
 .cloud4 {
-  animation: drift-cloud1 140s linear infinite;
+  animation: drift-cloud1 130s linear infinite;
 }
 
 @keyframes drift-cloud3 {
@@ -222,7 +223,7 @@ header {
   }
 }
 .cloud3 {
-  animation: drift-cloud3 125s linear infinite;
+  animation: drift-cloud3 115s linear infinite;
 }
 
 /*animation tractor*/
@@ -241,7 +242,7 @@ header {
   }
 }
 .tractor {
-  animation: move-tractor 25s linear infinite;
+  animation: move-tractor 15s linear infinite;
 }
 
 /*animation tractor shovel*/
@@ -260,7 +261,7 @@ header {
   }
 }
 .shovel {
-  animation: dump 25s infinite;
+  animation: dump 15s infinite;
   transform-origin: 588.26px 561.81px;
 }
 
@@ -299,14 +300,13 @@ header {
 .pants-blue,
 .pants-darkblue,
 .pants-lightblue {
-  animation: dump2 25s infinite;
+  animation: dump2 15s infinite;
   transform-origin: 588.26px 561.81px;
 }
 
 /*animation smoke*/
 @keyframes pulse {
-  0%,
-  100% {
+  0%, 100% {
     transform: scale(1);
   }
   50% {
@@ -388,8 +388,6 @@ header {
   animation: blink3 5s infinite;
 }
 
-
-
 /* mobile version */
 .turn {
   position: fixed;
@@ -404,8 +402,39 @@ header {
   visibility: hidden;
   font-size: 3vw;
 }
+
 @media screen and (max-width: 1200px) {
   .turn {
-      visibility: visible;
+    visibility: visible;
   }
 }
+/* reduced motion */
+@media (prefers-reduced-motion) {
+  .tractor {
+    animation: move-tractor 30s linear infinite;
+  }
+  .shovel {
+    animation: dump 30s infinite;
+  }
+  .shirt-purple,
+  .shirt-brown,
+  .shirt-brown2,
+  .shirt-green,
+  .shirt-red,
+  .pants-blue,
+  .pants-darkblue,
+  .pants-lightblue {
+    animation: dump2 30s infinite;
+  }
+  .cloud1,
+  .cloud2,
+  .cloud4 {
+    animation: drift-cloud1 220s linear infinite;
+  }
+  .cloud3 {
+    animation: drift-cloud3 205s linear infinite;
+  }
+  .sewing-sweater {
+    animation: sew 20s linear infinite alternate;
+  }
+}/*# sourceMappingURL=style.css.map */
